@@ -1,17 +1,20 @@
-# FPGA Hilbert Transform Demo
+# FPGA Analytic Signal Generator
 
-This repository contains a Vivado FPGA DSP demo based on a Hilbert Transform signal-processing chain.
+This repository contains an FPGA DSP demo for analytic signal generation. I worked on a Hilbert Transform based signal chain using Verilog and Xilinx IP cores.
 
-## What Is Included
+The design uses a DDS Compiler for sine wave generation, a FIR Compiler for Hilbert Transform processing, and an ILA for observing internal signals.
 
-- HDL/IP-related source files in `src/`
-- Block diagram and simulation images in `figures/`
-- Original short technical README as `original_readme.txt`
+## What I Did
 
-## What Is Excluded
+- Built a top-level Verilog design for the signal chain.
+- Used DDS, FIR, Clock Wizard, and ILA IP cores.
+- Generated in-phase and quadrature signal components.
+- Added schematic and simulation figures.
+- Added a simple LED toggle module to check that the design is running.
 
-Company-specific context, internship documents, datasheets, Xilinx manuals, generated Vivado project outputs, and proprietary data are excluded.
+## Repository Structure
 
-## Technical Overview
-
-The design demonstrates a signal chain using a generated sine wave, FIR-based Hilbert Transform processing, and FPGA observation/debug components such as an ILA.
+```text
+src/        Verilog and Xilinx IP-related files
+figures/    Block diagrams and simulation results
+```
